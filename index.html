@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Investimentos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lucide@0.453.0"></script>
+</head>
+<body>
+<main id="auth" class="auth">
+  <section class="auth-card">
+    <div class="logo"><i data-lucide="trending-up"></i> Investimentos</div>
+    <form id="f-login">
+      <h1>Entrar</h1>
+      <label>E-mail<input name="email" type="email" required autocomplete="email"></label>
+      <label>Palavra-passe
+        <span class="pw"><input name="pass" type="password" required autocomplete="current-password"><button type="button" class="ghost" data-act="eye" aria-label="Mostrar ou ocultar palavra-passe"><i data-lucide="eye"></i></button></span>
+      </label>
+      <div class="row"><label class="chk"><input type="checkbox" name="lembrar"> Lembrar-me</label><a href="#" data-act="recover">Recuperar palavra-passe</a></div>
+      <button class="btn">Entrar</button>
+      <p class="alt">Ainda não tem conta? <a href="#" data-act="auth-reg">Criar conta</a></p>
+    </form>
+    <form id="f-reg" hidden>
+      <h1>Cadastrar</h1>
+      <label>Nome completo<input name="nome" required></label>
+      <label>E-mail<input name="email" type="email" required></label>
+      <label>Número de telefone<input name="tel" type="tel" required></label>
+      <label>Palavra-passe<span class="pw"><input name="pass" type="password" required minlength="6"><button type="button" class="ghost" data-act="eye" aria-label="Mostrar ou ocultar palavra-passe"><i data-lucide="eye"></i></button></span></label>
+      <label>Confirmar palavra-passe<input name="pass2" type="password" required></label>
+      <label class="chk"><input type="checkbox" name="termos" required> Aceito os termos e condições</label>
+      <button class="btn">Criar Conta</button>
+      <p class="alt"><a href="#" data-act="auth-login">Voltar ao início de sessão</a></p>
+    </form>
+  </section>
+</main>
+
+<div id="app" hidden>
+  <div class="shell">
+    <header id="hdr" class="top"></header>
+    <div id="demo"></div>
+    <main id="view"></main>
+  </div>
+</div>
+
+<div id="modal" class="modal" hidden></div>
+<div id="toasts" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
